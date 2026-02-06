@@ -1,0 +1,36 @@
+nido-mvp/
+  index.html
+  styles.css
+  app.js
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nido — MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🪺</div>
+      <div>
+        <div class="title">Nido</div>
+        <div class="subtitle">Criar acompañados, desde el inicio</div>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="container" aria-live="polite"></main>
+
+  <nav class="tabbar" aria-label="Navegación">
+    <button class="tab" data-route="home">Inicio</button>
+    <button class="tab" data-route="games">Juegos</button>
+    <button class="tab" data-route="calm">Calma</button>
+    <button class="tab" data-route="profile">Perfil</button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
