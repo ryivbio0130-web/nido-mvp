@@ -11,6 +11,44 @@
 <meta name="theme-color" content="#0b0f14">
 </head>
 <body>
+<section id="onboarding" class="onboarding">
+  <!-- Pantalla 1: Logo + bienvenida -->
+  <div class="ob-screen is-active" data-step="1">
+    <img class="ob-logo" src="icon-512.png" alt="Nido" />
+    <h1 class="ob-title">Nido</h1>
+    <p class="ob-subtitle">Criar acompañados, desde el inicio.</p>
+    <button class="ob-btn primary" data-next>Empezar con calma</button>
+  </div>
+  <!-- Pantalla 2: Rol (SIN logo) -->
+  <div class="ob-screen" data-step="2">
+    <h2 class="ob-question">¿Desde qué lugar te acompañamos hoy?</h2>
+    <div class="ob-options">
+      <button class="ob-btn" data-role="madre">Madre</button>
+      <button class="ob-btn" data-role="padre">Padre</button>
+      <button class="ob-btn" data-role="cuidador">Persona cuidadora</button>
+      <button class="ob-btn ghost" data-role="no-definir">Prefiero explorarlo luego</button>
+    </div>
+  </div>
+  <!-- Pantalla 3: Etapa (SIN logo) -->
+  <div class="ob-screen" data-step="3">
+    <h2 class="ob-question">¿En qué etapa está tu bebé?</h2>
+    <div class="ob-options">
+      <button class="ob-btn" data-stage="0-1">0–1 mes</button>
+      <button class="ob-btn" data-stage="2-3">2–3 meses</button>
+      <button class="ob-btn" data-stage="4-6">4–6 meses</button>
+      <button class="ob-btn" data-stage="7-9">7–9 meses</button>
+      <button class="ob-btn" data-stage="10-12">10–12 meses</button>
+    </div>
+  </div>
+  <!-- Pantalla 4: Cierre (SIN logo) -->
+  <div class="ob-screen" data-step="4">
+    <h2 class="ob-question">Gracias por estar aquí 🤍</h2>
+    <p class="ob-text">
+      En Nido no criamos con recetas perfectas. Criamos acompañados, a tu ritmo.
+    </p>
+    <button class="ob-btn primary" data-finish>Entrar a Nido</button>
+  </div>
+</section>
   <header class="topbar">
     <div class="brand">
       <div class="logo">🪺</div>
@@ -20,9 +58,7 @@
       </div>
     </div>
   </header>
-
   <main id="app" class="container" aria-live="polite"></main>
-
   <nav class="tabbar" aria-label="Navegación">
     <button class="tab" data-route="home">Inicio</button>
     <button class="tab" data-route="games">Juegos</button>
