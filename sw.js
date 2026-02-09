@@ -1,5 +1,5 @@
 // sw.js - Nido MVP (cache básico)
-const CACHE_NAME = "nido-cache-v1";
+const CACHE_NAME = "nido-cache-v7";
 const ASSETS = [
   "./",
   "./index.html",
@@ -19,11 +19,10 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.map((k) => (k !== CACHE_NAME ? caches.delete(k) : null)))
-    )
+    caches.keys().then(keys =>
+      Promise.all(keys.map(k => (k !== CACHE_NAME ? caches.delete(k) : null)))
+    ).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
 self.addEventListener("fetch", (event) => {
