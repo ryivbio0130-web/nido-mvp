@@ -1,4 +1,21 @@
 :root{
+  --nido-bg: #0b0f14;
+  --nido-card: rgba(255,255,255,0.06);
+  --nido-card2: rgba(255,255,255,0.09);
+  --nido-border: rgba(255,255,255,0.10);
+
+  --nido-peach1: #ffd7c4;
+  --nido-peach2: #ffc3ad;
+  --nido-peach3: #ff9b78;
+
+  --text: rgba(255,255,255,0.92);
+  --muted: rgba(255,255,255,0.70);
+
+  --radius: 18px;
+  --shadow: 0 14px 36px rgba(0,0,0,.35);
+}
+
+:root{
   --bg:#0b0f14;
   --card:#121a24;
   --muted:#9fb0c3;
@@ -268,4 +285,5 @@ body{
   border-color: rgba(255,255,255,0.25);
   color: rgba(255,255,255,0.92);
 }
+
 
