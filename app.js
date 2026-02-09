@@ -375,4 +375,62 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js").catch(console.error);
   });
 }
+(function () {
+  const ob = document.getElementById("onboarding");
+  if (!ob) return;
+
+  const screens = Array.from(ob.querySelectorAll(".ob-screen"));
+  const btnNext = ob.querySelector("[data-next]");
+  const btnFinish = ob.querySelector("[data-finish]");
+
+  // Si ya terminó onboarding antes, no lo muestres
+  const done = localStorage.getItem("nido_onboarding_done");
+  if (done === "yes") {
+    ob.style.display = "none";
+    return;
+  }
+
+  function showStep(step) {
+    screens.forEach((s) => s.classList.remove("is-active"));
+    const target = screens.find((s) => s.dataset.step === String(step));
+    if (target) target.classList.add("is-active");
+  }
+
+  // Pantalla 1 -> 2
+  if (btnNext) {
+    btnNext.addEventListener("click", () => showStep(2));
+  }
+
+  // Selección de rol (Pantalla 2 -> 3)
+  ob.addEventListener("click", (e) => {
+    const roleBtn = e.target.closest("[data-role]");
+    if (roleBtn) {
+      const role = roleBtn.getAttribute("data-role");
+      localStorage.setItem("nido_role", role);
+      showStep(3);
+      return;
+    }
+
+    // Selección de etapa (Pantalla 3 -> 4)
+    const stageBtn = e.target.closest("[data-stage]");
+    if (stageBtn) {
+      const stage = stageBtn.getAttribute("data-stage");
+      localStorage.setItem("nido_stage", stage);
+      showStep(4);
+      return;
+    }
+  });
+
+  // Finalizar (Pantalla 4 -> entra a la app)
+  if (btnFinish) {
+    btnFinish.addEventListener("click", () => {
+      localStorage.setItem("nido_onboarding_done", "yes");
+      ob.style.display = "none";
+    });
+  }
+
+  // Asegura que arranque en la pantalla 1
+  showStep(1);
+})();
+
 
