@@ -1,8 +1,8 @@
 {
   "name": "Nido",
-  "short_name": "Nido",
-  "start_url": "./?v=3",
-  "display": "standalone",
+ "start_url": "./",
+"scope": "./",
+"display": "standalone"
   "background_color": "#0b0f14",
   "theme_color": "#0b0f14",
   "orientation": "portrait",
@@ -21,6 +21,7 @@
     }
   ]
 }
+
 
 
 
