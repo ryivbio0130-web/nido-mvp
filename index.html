@@ -33,9 +33,17 @@ nido-mvp/
     <button class="tab" data-route="calm">Calma</button>
     <button class="tab" data-route="profile">Perfil</button>
   </nav>
-
   <script src="app.js"></script>
 </body>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js");
+    });
+  }
+</script>
+
 </html>
+
 
 
