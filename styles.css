@@ -310,6 +310,47 @@ body{
   box-shadow: var(--shadow);
   padding: 14px;
 }
+/* ===== NIDO: botones ===== */
+.btn{
+  border: 1px solid var(--nido-border);
+  background: var(--nido-card2);
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary{
+  border: none;
+  background: linear-gradient(135deg, var(--nido-peach2), var(--nido-peach3));
+  color: #24120f;
+}
+
+.btn:active{
+  transform: scale(0.98);
+}
+/* ===== NIDO: botones onboarding ===== */
+.ob-btn{ 
+  border: 1px solid var(--nido-border);
+  background: var(--nido-card2);
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ob-btn.primary{
+  border: none;
+  background: linear-gradient(135deg, var(--nido-peach2), var(--nido-peach3));
+  color: #24120f;
+}
+
+.ob-btn:active{
+  transform: scale(0.98);
+}
+
 
 
 
