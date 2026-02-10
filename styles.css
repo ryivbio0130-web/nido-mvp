@@ -371,6 +371,19 @@ body{
   background: linear-gradient(135deg, var(--nido-peach2), var(--nido-peach3));
   color: #24120f;
 }
+.home-card{
+  background: var(--nido-card2);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.mensaje-diario{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
 
 
 
