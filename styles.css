@@ -350,6 +350,28 @@ body{
 .ob-btn:active{
   transform: scale(0.98);
 }
+.ob-btn{
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--nido-border);
+  background: var(--nido-card2);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ob-btn:active{
+  transform: scale(0.98);
+}
+
+.ob-btn.primary{
+  border: none;
+  background: linear-gradient(135deg, var(--nido-peach2), var(--nido-peach3));
+  color: #24120f;
+}
+
 
 
 
