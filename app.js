@@ -171,6 +171,19 @@ function youForRole(roleId) {
 // 4) Render principal
 const appEl = document.getElementById("app");
 const tabButtons = document.querySelectorAll(".tab");
+function renderHome() {
+  const app = document.getElementById("app");
+
+  const mensaje = obtenerMensajeDelDia();
+
+  app.innerHTML = `
+    <div class="home-card">
+      <h2>Inicio</h2>
+      <p class="mensaje-diario">${mensaje}</p>
+    </div>
+  `;
+}
+
 
 function setRoute(route) {
   state.route = route;
@@ -465,11 +478,30 @@ if ("serviceWorker" in navigator) {
     "Criar es sostener y soltar."
   ]
 };
+    function obtenerMensajeDelDia() {
+  const etapa = localStorage.getItem("nido_stage");
+
+  if (!etapa || !mensajesPorEtapa[etapa]) {
+    return "Bienvenida/o a Nido 🤍";
+  }
+
+  const mensajes = mensajesPorEtapa[etapa];
+
+  // Elegimos mensaje según día del año
+  const hoy = new Date();
+  const diaDelAnio = Math.floor(
+    (hoy - new Date(hoy.getFullYear(), 0, 0)) / 86400000
+  );
+
+  return mensajes[diaDelAnio % mensajes.length];
+}
+
   }
 
   // Asegura que arranque en la pantalla 1
   showStep(1);
 })();
+
 
 
 
