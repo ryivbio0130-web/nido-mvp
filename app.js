@@ -427,10 +427,49 @@ if ("serviceWorker" in navigator) {
       localStorage.setItem("nido_onboarding_done", "yes");
       ob.style.display = "none";
     });
+    const mensajesPorEtapa = {
+  "gestacion": [
+    "Tu cuerpo está creando vida. Eso ya es suficiente por hoy 🤍",
+    "Respira profundo. Estás haciendo algo inmenso.",
+    "Hablarle hoy también es criar.",
+    "Descansar también es preparar el nido."
+  ],
+  "0-1": [
+    "Sobrevivir hoy ya es logro suficiente 🤍",
+    "No estás haciendo mal, estás aprendiendo.",
+    "Dormir poco no significa amar menos.",
+    "Tu calma también regula."
+  ],
+  "2-3": [
+    "Las sonrisas empiezan a aparecer 💛",
+    "Tu voz ya es hogar.",
+    "No necesitas hacerlo perfecto.",
+    "Mirarse también es vínculo."
+  ],
+  "4-6": [
+    "Explorar es parte del crecimiento.",
+    "Tu presencia vale más que cualquier estímulo.",
+    "Cada gesto tuyo construye seguridad.",
+    "Criar también es acompañarte."
+  ],
+  "7-9": [
+    "El movimiento es descubrimiento.",
+    "Separarse un poco también es crecer.",
+    "Estás sembrando confianza.",
+    "No todo llanto es error."
+  ],
+  "10-12": [
+    "Nombrar el mundo es empezar a habitarlo.",
+    "Los límites también son cuidado.",
+    "Tu mirada sigue siendo base segura.",
+    "Criar es sostener y soltar."
+  ]
+};
   }
 
   // Asegura que arranque en la pantalla 1
   showStep(1);
 })();
+
 
 
